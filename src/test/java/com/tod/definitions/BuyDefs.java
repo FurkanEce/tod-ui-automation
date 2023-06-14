@@ -7,9 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import static com.tod.helpers.Driver.driver;
 
 public class BuyDefs {
     private BuyPage buyPage;
@@ -40,7 +38,7 @@ public class BuyDefs {
 
     @When("User clicks to the buy now button")
     public void userClicksToTheBuyNowButton() {
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.get();
         jsExecutor.executeScript("arguments[0].click();", this.buyPage.advantagePackageSelectBtn);
     }
 }
