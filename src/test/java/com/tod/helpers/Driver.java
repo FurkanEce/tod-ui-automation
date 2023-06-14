@@ -15,10 +15,7 @@ public class Driver {
     public static WebDriver driver;
 
     public static WebDriver get() {
-        Dotenv dotenv = Dotenv.configure().filename(".env")
-                .ignoreIfMissing()
-                .ignoreIfMalformed()
-                .load();
+        Dotenv dotenv = Dotenv.configure().filename(".env").load();
 
         if (driver == null) {
 

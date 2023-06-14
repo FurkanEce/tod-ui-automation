@@ -18,7 +18,6 @@ public class ShoppingCartDefs {
     @And("Shopping cart page is checked")
     public void shoppingCartPageIsChecked(){
         Assertions.assertEquals("(Avantajlı Sezonluk Süper Lig )", this.shoppingCartPage.advantagePackageShoppingCart.getText());
-        Driver.closeDriver();
     }
 
 }

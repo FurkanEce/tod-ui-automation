@@ -7,9 +7,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.Dimension;
-
-import java.util.concurrent.TimeUnit;
 
 public class WelcomeDefs {
     private WelcomePage welcomePage;
@@ -22,8 +19,6 @@ public class WelcomeDefs {
 
     @Given("User goes to the TOD page")
     public void userGoesToTheTODPage(){
-        Driver.get().manage().window().setSize(new Dimension(1920, 1080));
-        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.get().get(this.dotenv.get("url"));
     }
 
