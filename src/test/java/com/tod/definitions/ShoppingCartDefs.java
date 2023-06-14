@@ -1,5 +1,6 @@
 package com.tod.definitions;
 
+import com.tod.helpers.Driver;
 import com.tod.pages.BuyPage;
 import com.tod.pages.ShoppingCartPage;
 import io.cucumber.java.en.And;
@@ -17,6 +18,7 @@ public class ShoppingCartDefs {
     @And("Shopping cart page is checked")
     public void shoppingCartPageIsChecked(){
         Assertions.assertEquals("(Avantajlı Sezonluk Süper Lig )", this.shoppingCartPage.advantagePackageShoppingCart.getText());
+        Driver.closeDriver();
     }
 
 }
