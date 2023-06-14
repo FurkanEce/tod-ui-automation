@@ -13,8 +13,4 @@ import org.junit.runner.RunWith;
         glue = "com/tod/definitions"
 )
 public class CucumberRunner {
-    @AfterAll
-    public void tearDown(){
-        Driver.closeDriver();
-    }
 }
